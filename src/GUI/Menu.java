@@ -19,12 +19,15 @@ public class Menu implements ActionListener {
     private JLabel p2Meno;
 
 
+    //Konštruktor pre menu ktorému dodám na vstupe frame a ovladaciu triedu , pridám actionlistener na button
     public Menu(Frame frame, NewGame newGame) {
         this.frame = frame;
         this.newGame = newGame;
         goToGameButton.addActionListener(this);
     }
 
+    // Ak je kliknuté na button skontrolujem èi sú vyplnené polia pre mená hráèov ak ano tak ich nasetujem mojím objektom player1 a player2
+    // Na konci zavolam menu a metodu ktorá dodá nový obsah pre okno
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(goToGameButton)){
@@ -35,7 +38,7 @@ public class Menu implements ActionListener {
             }
         }
     }
-
+    // Metoda vracia tento menuPanel pri zavolani sa teda znovu otvori okno menu
     public JPanel getContent(){
         return this.menuPanel;
     }

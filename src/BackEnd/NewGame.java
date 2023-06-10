@@ -11,6 +11,7 @@ public class NewGame {
     private Player player1 = new Player();
     private Player player2 = new Player();
 
+    //Tu si vytvorím mojích hráèov
     public Player getPlayer1() {
         return player1;
     }
@@ -19,7 +20,7 @@ public class NewGame {
     }
 
 
-
+    //Metoda vytvorí okno a potom nadstavím pozadie pre toto okno
     public void playGame(){
 
 

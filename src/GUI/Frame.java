@@ -12,7 +12,7 @@ import java.awt.Toolkit;
 
     public class Frame extends JFrame {
         private Menu menu;
-        //Konötruktor okna ktor˝ ma na vstupe metodu ktora bude riadi? program
+        //Konötruktor okna ktor˝ ma na vstupe metodu ktora bude obsluhovaù okno
         // Obsahuje zakladne prikazy na naöt˝lovanie okna
         public Frame(NewGame newGame) {
             setLayout(new FlowLayout());
@@ -20,7 +20,7 @@ import java.awt.Toolkit;
             setResizable(false);
             setSize(1300,800);
 
-
+            //VytvorÌm si nove menu a zavolam jeho metodu ktora mi dod· obsah okna
             menu = new Menu(this,newGame);
             setContentPane(menu.getContent());
 
