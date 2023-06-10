@@ -1,6 +1,7 @@
 package BackEnd;
 
 import GUI.Frame;
+import GUI.Game;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,4 +34,5 @@ public class NewGame {
         int centerY = (screenSize.height - menu.getHeight()) / 2;
         menu.setLocation(centerX, centerY);
     }
+
 }
