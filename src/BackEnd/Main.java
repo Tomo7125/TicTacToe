@@ -1,3 +1,5 @@
+package BackEnd;
+
 import BackEnd.NewGame;
 
 public class Main {
