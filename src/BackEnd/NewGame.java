@@ -19,10 +19,8 @@ public class NewGame {
         return player2;
     }
 
-
     //Metoda vytvorí okno a potom nadstavím pozadie pre toto okno
     public void playGame(){
-
 
         Frame menu = new Frame(this);
 
@@ -36,5 +34,4 @@ public class NewGame {
         menu.setLocation(centerX, centerY);
 
     }
-
 }

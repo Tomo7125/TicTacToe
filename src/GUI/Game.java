@@ -72,7 +72,6 @@ public class Game implements ActionListener {
         int randNumber = (Math.random() <= 0.5) ? 1 : 2;
         // sem budem vipisovat nahodne kto zacina a potm sa to bude po kazdom kole strieda
         nextPlayer.setText("It's her turn : " + ((randNumber < 2) ? newGame.getPlayer1().getName() : newGame.getPlayer2().getName()));
-
     }
 
     //Metody ktore budem vola podla toho kto je na ahu
