@@ -24,6 +24,16 @@ import java.awt.Toolkit;
             menu = new Menu(this,newGame);
             setContentPane(menu.getContent());
 
+            // Získanie ve¾kosti obrazovky
+            Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+
+            // Výpoèet strednej polohy pre okno
+            int centerX = (screenSize.width - menu.getFrame().getWidth()) / 2;
+            int centerY = (screenSize.height - menu.getFrame().getHeight()) / 2;
+
+            // Nastavenie pozície okna na stred obrazovky
+            menu.getFrame().setLocation(centerX, centerY);
+
 
             setVisible(true);
         }

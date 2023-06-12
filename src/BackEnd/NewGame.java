@@ -34,6 +34,7 @@ public class NewGame {
         int centerX = (screenSize.width - menu.getWidth()) / 2;
         int centerY = (screenSize.height - menu.getHeight()) / 2;
         menu.setLocation(centerX, centerY);
+
     }
 
 }

@@ -7,6 +7,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class Menu implements ActionListener {
     private Frame frame;
@@ -24,6 +26,23 @@ public class Menu implements ActionListener {
         this.frame = frame;
         this.newGame = newGame;
         goToGameButton.addActionListener(this);
+
+        textFieldPlayer2Name.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    goToGameButton.doClick(); // Vyvolanie kliknutia na buttonLogin
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+            }
+        });
     }
 
     // Ak je kliknuté na button skontrolujem èi sú vyplnené polia pre mená hráèov ak ano tak ich nasetujem mojím objektom player1 a player2
@@ -42,4 +61,5 @@ public class Menu implements ActionListener {
     public JPanel getContent(){
         return this.menuPanel;
     }
+    public Frame getFrame(){return frame;}
 }

@@ -5,8 +5,11 @@ import BackEnd.NoWinGame;
 import BackEnd.PlayerWin;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import static java.awt.SystemColor.menu;
 
 public class Game implements ActionListener {
     private Frame frame;
@@ -69,11 +72,13 @@ public class Game implements ActionListener {
         int randNumber = (Math.random() <= 0.5) ? 1 : 2;
         // sem budem vipisovat nahodne kto zacina a potm sa to bude po kazdom kole strieda
         nextPlayer.setText("It's her turn : " + ((randNumber < 2) ? newGame.getPlayer1().getName() : newGame.getPlayer2().getName()));
+
     }
 
     //Metody ktore budem vola podla toho kto je na ahu
     private void nextP1(){nextPlayer.setText("It's her turn : " + newGame.getPlayer1().getName());}
     private void nextP2(){nextPlayer.setText("It's her turn : " + newGame.getPlayer2().getName());}
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -175,6 +180,7 @@ public class Game implements ActionListener {
     public JPanel getContent(){
         return this.game;
     }
+    public Frame getFrame(){return frame;}
 
     //Metoda zisuje víaza
     public void playerWinGame(JButton arrayWin){
